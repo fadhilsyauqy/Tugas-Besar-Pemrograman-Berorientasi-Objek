@@ -69,9 +69,9 @@ Apabila player 2 memenangkan game, maka akan muncul tampilan seperti gambar diat
 
 | Tombol | Fungsi | 
 | ------ | ------ |
-|  | Untuk melompat | 
-|  | Untuk Bergerak ke kiri |
-|  | Untuk bergerak ke kanan | 
+| ⬆️ | Untuk melompat | 
+| ⬅️ | Untuk Bergerak ke kiri |
+| ➡️ | Untuk bergerak ke kanan | 
 | Ctrl ( Ctrl kiri ) | Menembak
 
 
