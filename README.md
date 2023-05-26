@@ -1,7 +1,7 @@
 # Tugas-Besar-Pemrograman-Berorientasi-Objek
 
 # MbakTembak
-![2023-05-26 (9)](https://github.com/NoviFitria/Tugas-Besar-Pemrograman-Berorientasi-Objek/assets/133132375/d8c6d8fe-3703-4cf6-bb46-ae45335f12c2)
+![cium aku mas](https://github.com/NoviFitria/Tugas-Besar-Pemrograman-Berorientasi-Objek/assets/133132375/61e14cda-dfe0-43f1-9e27-04a6081a9bfe)
 
 ### Nama Anggota Kelompok
 
