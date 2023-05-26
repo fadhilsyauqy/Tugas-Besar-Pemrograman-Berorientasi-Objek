@@ -31,9 +31,6 @@ Cara kerjanya saat pemain 1 menembakkan peluru ke pemain 2 maka darah di player 
 
 
 ### UML Class Diagram
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
 
