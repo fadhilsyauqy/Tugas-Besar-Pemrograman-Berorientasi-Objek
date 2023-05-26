@@ -92,3 +92,113 @@ class Game():
             self.run = False
 
         pygame.display.update() 
+        
+     #logic peluru
+    def attck_handle(self): 
+        for bulet in self.Player_1.basic_att:
+            bulet.x += self.b_vel
+            if self.Player_2.rect.colliderect(bulet):
+                pygame.event.post(pygame.event.Event(self.player2_hit))
+                self.Player_1.basic_att.remove(bulet)
+            elif bulet.x > self.width :
+                self.Player_1.basic_att.remove(bulet)
+
+        for bulet in self.Player_2.basic_att:
+            bulet.x -= self.b_vel
+            if self.Player_1.rect.colliderect(bulet):
+                pygame.event.post(pygame.event.Event(self.player1_hit))
+                self.Player_2.basic_att.remove(bulet)
+            elif bulet.x < 0 :
+                self.Player_2.basic_att.remove(bulet)
+
+
+                    
+    #fungsi ini agar player dapat berjalan 
+    def movement_handle (self, keys_pressed):
+        if keys_pressed[pygame.K_a] and self.Player_1.rect.x - self.vel > 0 :  # LEFT
+            self.Player_1.rect.x -= self.vel
+            self.Player_1.mundur()
+        if keys_pressed[pygame.K_d] and self.Player_1.rect.x + self.Player_1.width_P  + self.vel < self.width:  # RIGHT
+            self.Player_1.rect.x += self.vel
+            self.Player_1.maju()
+        if keys_pressed[pygame.K_w] and self.Player_1.rect.y - self.vel > 0: # UP
+            self.jump_1 = True  
+            self.Player_1.jump()     
+
+        if keys_pressed[pygame.K_LEFT] and self.Player_2.rect.x - self.vel :  # LEFT
+            self.Player_2.rect.x -= self.vel
+            self.Player_2.maju()
+        if keys_pressed[pygame.K_RIGHT] and self.Player_2.rect.x + self.vel < self.width  - 100:  # RIGHT
+            self.Player_2.rect.x += self.vel
+            self.Player_2.mundur()
+        if keys_pressed[pygame.K_UP] and self.Player_2.rect.y - self.vel > 0:  # UP
+            self.jump_2 = True
+            self.Player_2.jump()    
+
+        if self.jump_1 :
+            self.Player_1.jumping()
+
+            if self.Player_1.jmp == False:
+                self.jump_1 = False
+                self.Player_1.jmp = True
+        else :
+            pass
+
+        if self.jump_2 :
+            self.Player_2.jumping()
+
+            if self.Player_2.jmp == False:
+                self.jump_2 = False
+                self.Player_2.jmp = True
+        else :
+            pass
+    
+    
+    #fungsi untuk mendapatkan event terhadap kejadian pada game. Mis QUIT, PLAY, START, dll
+    def get_event(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.run = False
+        
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LCTRL and len(self.Player_1.basic_att) < self.peluru :
+                    bullet = pygame.Rect(self.Player_1.rect.x + self.Player_1.width_P, self.Player_1.rect.y + self.Player_1.height_P//2 -2 , 10, 5)
+                    self.Player_1.basic_att.append(bullet)
+    
+                if event.key == pygame.K_RCTRL and len(self.Player_2.basic_att) < self.peluru :
+                    bullet = pygame.Rect(self.Player_2.rect.x, self.Player_2.rect.y + self.Player_2.height_P//2 -2, 10, 5)
+                    self.Player_2.basic_att.append(bullet)
+
+            if event.type == self.player1_hit:
+                self.Player_1.defend(self.Player_2.damage)
+
+            if event.type == self.player2_hit:
+                self.Player_2.defend(self.Player_1.damage)
+
+    #fungsi ini untuk menampilkan tampilan game
+    def draw_window(self):
+        self.window.blit(self.bg, (0, 0))
+
+        self.Player_1.display(self.window, True, self.Player1_nama)
+        self.Player_2.display(self.window, False, self.Player2_nama)
+
+
+        self.window.blit(self.Player_1.image, (self.Player_1.rect.x , self.Player_1.rect.y))
+        self.window.blit(pygame.transform.flip(self.Player_2.image, True, False), (self.Player_2.rect.x , self.Player_2.rect.y))
+
+        
+        for bulet in self.Player_1.basic_att:
+            bulet_image = self.Player_1.peluru()
+            self.window.blit(bulet_image, (bulet.x, bulet.y - 25))
+            
+        for bulet in self.Player_2.basic_att:
+            bulet_image = self.Player_2.peluru()
+            bulet_image = pygame.transform.flip(bulet_image, True, False)
+            self.window.blit(bulet_image, (bulet.x + 15 , bulet.y  - 25))
+
+
+        pygame.display.update()
+
+        self.Player_1.basic_action()
+        self.Player_2.basic_action()
+
