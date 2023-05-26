@@ -45,11 +45,11 @@ Setelah user selesai memilih player 1, maka akan muncul tampilan memilih player 
 
 Setelah user selesai memilih player 2, maka game akan dimulai dan user dapat memainkan game. 
 
-![Cuplikan layar 2023-05-26 202816](https://github.com/NoviFitria/Tugas-Besar-Pemrograman-Berorientasi-Objek/assets/133132375/ac0207cb-8189-465d-9e10-f10478e21397)
+![Cuplikan layar 2023-05-26 202816 (2)](https://github.com/NoviFitria/Tugas-Besar-Pemrograman-Berorientasi-Objek/assets/133132375/8c2dbb74-69c3-4190-b24e-df6c909530b4)
 
 Apabila player 1 memenangkan game, maka akan muncul tampilan seperti gambar diatas.
 
-![Cuplikan layar 2023-05-26 202917](https://github.com/NoviFitria/Tugas-Besar-Pemrograman-Berorientasi-Objek/assets/133132375/ab9f970e-9548-43c4-b9d8-a1e9197fee3a)
+![Cuplikan layar 2023-05-26 202917 (2)](https://github.com/NoviFitria/Tugas-Besar-Pemrograman-Berorientasi-Objek/assets/133132375/9243dda2-674c-49d5-ba1a-06a3788407dd)
 
 Apabila player 2 memenangkan game, maka akan muncul tampilan seperti gambar diatas.
 
@@ -78,7 +78,7 @@ Apabila player 2 memenangkan game, maka akan muncul tampilan seperti gambar diat
 
 ### UML Class Diagram
 
-![UML FIX BGT drawio](https://github.com/NoviFitria/Tugas-Besar-Pemrograman-Berorientasi-Objek/assets/133132375/389b0893-9b9c-4092-90aa-52a3d04ab01a)
+![uml](https://github.com/NoviFitria/Tugas-Besar-Pemrograman-Berorientasi-Objek/assets/133132375/806a7039-c14a-4e36-8906-42f30983d095)
 
 
 
