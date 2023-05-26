@@ -56,7 +56,7 @@ Apabila player 2 memenangkan game, maka akan muncul tampilan seperti gambar diat
 
 ### Petunjuk Permainan
 
-'Player 1'
+`Player 1`
 
 | Tombol | Fungsi | 
 | ------ | ------ |
@@ -65,7 +65,7 @@ Apabila player 2 memenangkan game, maka akan muncul tampilan seperti gambar diat
 | D | Untuk bergerak ke kanan | 
 | Ctrl ( Ctrl sebelah kiri ) | Menembak
 
-'Player 2'
+`Player 2`
 
 | Tombol | Fungsi | 
 | ------ | ------ |
