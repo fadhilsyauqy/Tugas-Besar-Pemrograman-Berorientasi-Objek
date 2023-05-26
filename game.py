@@ -52,7 +52,7 @@ class Game():
 
             if self.Player_2.current_health <= 0:
                     self.Player_2.dead()
-                    winner_image = pygame.image.load('Assets/Background/win_p1.png')
+                    winner_image = pygame.image.load('Assets/Background/win_p3.png')
 
 
             if winner_image is not None:
