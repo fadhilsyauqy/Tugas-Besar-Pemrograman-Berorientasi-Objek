@@ -201,4 +201,104 @@ class Game():
 
         self.Player_1.basic_action()
         self.Player_2.basic_action()
+        
+     # Fungsi menu hero atau fungsi untuk memilih hero untuk player 1 dan player 2
+    def load_hero(self, A, B, C, D):
+        i = 1
+        pygame.time.delay(200)
+        while i < 3:
+            self.get_event()
+            
+            # Untuk player 1 dapat memilih hero terlebih dahulu
+            if i == 1:
+                self.window.blit(self.bg_menu1, (0,0))
+                player1_image = pygame.image.load(os.path.join('Assets/Background/player1.png'))
+                self.window.blit(player1_image, (self.width/2 - player1_image.get_width() /2, 40))
+                
+                if A.display_Menu(self.window):
+                    self.Player_1 = Hero_1(50, 250)
+                    self.Player1_nama = "Mas Dor"
+                    i= 2
+                    A.selected = True
+                elif B.display_Menu(self.window):
+                    self.Player_1 = Hero_2(50, 250)
+                    self.Player1_nama = "Mas Eker"
+                    i= 2
+                elif C.display_Menu(self.window):
+                    self.Player_1 = Hero_3(50, 250)
+                    self.Player1_nama = "Pak Pol"
+                    i= 2
+                elif D.display_Menu(self.window):
+                    self.Player_1 = Hero_4(50, 250)
+                    self.Player1_nama = "Pak Mob"
+                    i= 2
+                
+            # Untuk player 2 dapat memilih hero setelah player 1 selesai memilih hero
+            elif i == 2:
+                self.window.blit(self.bg_menu2, (0,0))
+                player2_image = pygame.image.load(os.path.join('Assets/Background/player2.png'))
+                self.window.blit(player2_image, (self.width/2 - player2_image.get_width() /2, 40))
+                
+                if A.display_Menu(self.window):
+                    self.Player_2 = Hero_1(650, 250)
+                    self.Player2_nama= "Mas Dor"
+                    i= 3
+                elif B.display_Menu(self.window):
+                    self.Player_2 = Hero_2(650, 250)
+                    self.Player2_nama= "Mas Eker"
+                    i= 3
+                elif C.display_Menu(self.window):
+                    self.Player_2 = Hero_3(650, 250)
+                    self.Player2_nama= "Pak Pol"
+                    i= 3
+                elif D.display_Menu(self.window):
+                    self.Player_2 = Hero_4(650, 250)
+                    self.Player2_nama= "Pak Mob"
+                    i= 3
+                    
+
+            pygame.display.update()
+
+    #fungsi ini untuk membuat objek menu
+    def login_game(self):
+        img_start = pygame.image.load(os.path.join('Assets/Background/start.png'))
+        img_quit = pygame.image.load(os.path.join('Assets/Background/quit.png'))
+        Hero_1_image_menu = pygame.image.load(os.path.join('Assets/Karakter/MasDor/MasDor.png'))
+        Hero_2_image_menu = pygame.image.load(os.path.join('Assets/Karakter/MasEker/MasEker.png'))
+        Hero_3_image_menu = pygame.image.load(os.path.join('Assets/Karakter/PakPol/PakPol.png'))
+        Hero_4_image_menu = pygame.image.load(os.path.join('Assets/Karakter/PakMob/PakMob.png'))
+
+        self.Start = Menu(img_start, self.width/2 - 80, 295, 150, 50)
+        self.Quit = Menu(img_quit, self.width/2 - 80,  375, 150, 50)
+        MasDor = Menu(Hero_1_image_menu, 25, self.height /2 - 50,150, 220)
+        MasDor.selected = False
+        MasEker = Menu(Hero_2_image_menu,225, self.height/2 - 50, 150, 220 )
+        MasEker.selected = False
+        PakPol = Menu(Hero_3_image_menu,425, self.height/2 - 50, 150, 220)
+        PakPol.selected = False
+        PakMod = Menu(Hero_4_image_menu,625, self.height/2 - 50, 150, 220)
+        PakMod.selected = False
+
+        mixer.music.load('Assets/Musik/menu_sound.mp3')
+        mixer.music.set_volume(0.5)
+        mixer.music.play(-1)
+        while self.run == True:
+            
+            self.window.blit(self.menuhome, (0,0))
+
+            self.get_event()
+            if self.Start.display_Menu(self.window):
+                self.load_hero(MasDor, MasEker, PakPol, PakMod)
+                self.loop()
+            
+            if self.Quit.display_Menu(self.window):
+                self.run = False
+
+            pygame.display.update() 
+
+if __name__ == "__main__":
+    Mbaktembak = Game()
+
+    Mbaktembak.login_game()
+
 
