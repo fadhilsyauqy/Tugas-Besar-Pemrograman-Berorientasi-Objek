@@ -20,11 +20,23 @@
 Mbaktembak adalah sebuah game yang memiliki genre action(laga). Game ini terinspirasi dari game tekken. Pada game ini terdapat 2 pemain dimana tiap pemain bertujuan untuk bertarung menggunakan senjata api dari karakter itu sendiri. Pada tiap karakter akan memiliki nyawa berupa kapasitas darah.
 Cara kerjanya saat pemain 1 menembakkan peluru ke pemain 2 maka darah di player 2 akan berkurang begitu pula sebaliknya. Sehingga harus menghindari peluru yang ditembakkan oleh pemain lain agar memenangkan game ini.Game ini akan selesai (game over) apabila salah satu dari player darahnya (nyawa) sudah habis terlebih dahulu.
 
-### Dependensi Game
+## How to Run a Game
+- #### Install Dependencies 
+```bash 
+git clone https://github.com/NoviFitria/Tugas-Besar-Pemrograman-Berorientasi-Objek.git 
+``` 
 
-- jhdifhosifhs
--
--
+```bash
+cd Tugas-Besar-Pemrograman-Berorientasi-Objek 
+```
+```bash
+pip install pygame 
+```
+- ### Run a Game 
+
+```python 
+python game.py
+```
 
 
 ### Penjelasan Alur Game
