@@ -93,7 +93,7 @@ Apabila player 2 memenangkan game, maka akan muncul tampilan seperti gambar diat
 ![uml](https://github.com/NoviFitria/Tugas-Besar-Pemrograman-Berorientasi-Objek/assets/133132375/806a7039-c14a-4e36-8906-42f30983d095)
 
 ### DEMO GAME
-[![MBAKTEMBAK] (https://youtu.be/IlnBZCPXOlc "MBAKTEMBAK")
+[![MBAKTEMBAK] (nilaiA)](https://youtu.be/IlnBZCPXOlc "MBAKTEMBAK")
 
 
 
