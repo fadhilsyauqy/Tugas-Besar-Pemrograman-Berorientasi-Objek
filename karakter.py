@@ -190,7 +190,7 @@ class Hero_3(Karakter):
         self.image = pygame.transform.flip(self.image, True, False)
 
     def jump(self):
-        jump_image = pygame.image.load(os.path.join('Assets/Karakter/PakPol/karakter_jump.png'))
+        jump_image = pygame.image.load(os.path.join('Assets/Karakter/PakPol/karakter_Jump.png'))
         self.image = pygame.transform.scale(jump_image, (self.width_P , self.height_P))
 
     def peluru(self):
