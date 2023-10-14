@@ -261,8 +261,8 @@ class Game():
 
     #fungsi ini untuk membuat objek menu
     def login_game(self):
-        img_start = pygame.image.load(os.path.join('Assets/Background/start.png'))
-        img_quit = pygame.image.load(os.path.join('Assets/Background/quit.png'))
+        img_start = pygame.image.load(os.path.join('Assets/Background/Start.png'))
+        img_quit = pygame.image.load(os.path.join('Assets/Background/Quit.png'))
         Hero_1_image_menu = pygame.image.load(os.path.join('Assets/Karakter/MasDor/MasDor.png'))
         Hero_2_image_menu = pygame.image.load(os.path.join('Assets/Karakter/MasEker/MasEker.png'))
         Hero_3_image_menu = pygame.image.load(os.path.join('Assets/Karakter/PakPol/PakPol.png'))
