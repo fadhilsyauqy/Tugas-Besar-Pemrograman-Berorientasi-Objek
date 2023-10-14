@@ -23,7 +23,7 @@ Cara kerjanya saat pemain 1 menembakkan peluru ke pemain 2 maka darah di player 
 ### How to Run a Game
 - ##### Install Dependencies 
 ```bash 
-git clone https://github.com/NoviFitria/Tugas-Besar-Pemrograman-Berorientasi-Objek.git 
+git clone https://github.com/fadhilsyauqy/Tugas-Besar-Pemrograman-Berorientasi-Objek.git 
 ``` 
 
 ```bash
